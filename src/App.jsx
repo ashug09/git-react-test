@@ -36,7 +36,7 @@ function App() {
           Reset
         </button>
         <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+          TEST APP BY TEAM
         </p>
       </div>
       <p className="read-the-docs">
