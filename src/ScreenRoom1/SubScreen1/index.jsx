@@ -6,5 +6,3 @@ export default function SubScreen1() {
     };
     return <div>Index</div>;
 }
-
-//Test App
