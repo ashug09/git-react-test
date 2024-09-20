@@ -3,23 +3,37 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+// A reusable Logo component
+const Logo = ({ href, src, alt, className }) => (
+  <a href={href} target="_blank" rel="noopener noreferrer">
+    <img src={src} className={className} alt={alt} />
+  </a>
+)
+
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="logo-container">
+        <Logo href="https://vitejs.dev" src={viteLogo} alt="Vite logo" className="logo" />
+        <Logo href="https://react.dev" src={reactLogo} alt="React logo" className="logo react" />
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+        <button 
+          onClick={() => setCount(count + 1)} 
+          className="btn"
+          aria-label="Increase count"
+        >
+          Count is {count}
+        </button>
+        <button 
+          onClick={() => setCount(0)} 
+          className="btn reset"
+          aria-label="Reset count"
+        >
+          Reset
         </button>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
