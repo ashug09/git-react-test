@@ -12,6 +12,7 @@ rl.question("Please enter your name: ", function(name) {
   // Log the response
   console.log("hi!");
   console.log("My name is Anthony Ghonzalvez.");
+  console.log("Mai duniya me akela hu");
   
   // Close the readline interface
   rl.close();
